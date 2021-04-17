@@ -1,1 +1,86 @@
-The github tutorial
+[The github tutorial]
+
+//check git version
+$ git --version
+
+//To use computer as github store, setting up the enviroment for interlocking the github 
+$ git config --global user.name jj904
+$ git config --global user.email "123@gmail.com"
+
+//check if the command went in well
+$ git config user.name   /*jj904*/
+$ git config user.email /*123@gmail.com*/
+
+
+//Create new project 
+$ cd (folderName/CreatedFolder)
+$ git init   /*initialized Git*/
+$ git status /*message :untracked files: list file names(w/ red color)*/
+$ git add .  /*Add files to index */
+$ git status /*message :Changes to be committed: list file names(w/ green color)*/
+$ git commit -m "First commit. Project created" /*Commit to local Repo - git bush*/
+$ git log    /*Check-commmit Made,  message: First commit. Project created"*/
+
+//if nothing had been modified...
+$ git commit -m "second commit?"  /*message if nothing to commit*/
+$ git log  /*message :First commit, Project created*/
+
+//work on project (intelliJ)
+//Check: status 
+$ git status  /*Changes not statged for commit (message: modified: ....-red)*/
+$ git add . 
+//add files to index
+$ git status /*Change to be committed (message: modified ...-green)
+$ git commit -m "Second commit. project done." /*commit to local repo*/
+//Check commits made
+$ git log  /*message :Second commit. Project done.
+
+//Create Remote New Repo
+//Connect Remote New Repo
+
+
+//---------------------------------------------------------------------------------------------
+//download files from github w/ clone
+$ cd C:\(NewfoldersName)  
+$ git clone (copyed address from github)
+$ dir  /*to check folder's location*/
+$ cd (folderName ;folder name downloaded from github)
+
+
+//if you add more stuff, move into the folder where you want added + save file
+$ git status /*to check is condition*/
+$ git add . /*to add file into the staging area*/
+$ git status /*can check the file is suceessfully into the state*/
+
+//if you want to make the file go down stage after you add it, use reset
+$ git reset (fileName)
+$ git status /*if check the file was deleted */
+
+//Commit
+$ git commit -m "message"
+$ git status /*By git status, check that 1 commit has been made.
+$ git push /*to successfully upload file into the project*/
+
+
+
+//if you want to add more source code to the certain file
+* get into the file and fix or add more source code
+
+$ git status /*Git status shows that specific file has been modified with a message from modified*/
+
+/*in this case 2 option,
+condi 1) checkout -- to discard changes in working be committed
+condi 2) add      -- to update what will be committed.    
+
+//if choose condi1, 
+$ git checkout --(fileName)  /*return to the state before I modified it*/
+$ git status /*to check the source code was back to the previous status*/
+
+//if choose condi2
+$ git add . /*update the changed source code to the stage*/
+$ git commit -m "message"
+
+//if you wrote wrong commit instruction then use = > git commit -ammed
+$ git status /*check my branch is ahead of by 1 commit */
+$ git push 
+
